@@ -26,8 +26,9 @@ jobs:
       - name: Build EXE
         run: pyinstaller --onefile --noconsole main.py
 
-      - name: Upload EXE as artifact
+      - name: Upload EXE artifact (new syntax)
         uses: actions/upload-artifact@v4
         with:
           name: TEG_Carwash
           path: dist/main.exe
+          compression-level: 0
